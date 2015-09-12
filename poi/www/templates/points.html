@@ -5,13 +5,11 @@
       <input class='item item-input' ng-model="searchText">
     </label>
     <ion-list>
-      <ion-item ng-repeat="point in points | filter:searchText">
-        <a href="#/details/{{point.id}}">
-          <h2>{{point.title}}</h2>
-          <h4>{{point.shortDescription}}</h4>
-          <ion-spinner icon="dots" ng-hide='!point.showDistance()'></ion-spinner>
-          <h4 ng-hide='point.showDistance()'>{{point.distance}} km</h4>
-        </a>
+      <ion-item ng-href="#/details/{{point.id}}" ng-repeat="point in points | filter:searchText">
+        <h2>{{point.title}}</h2>
+        <h4>{{point.shortDescription}}</h4>
+        <ion-spinner icon="dots" ng-hide='!point.showDistance()'></ion-spinner>
+        <h4 ng-hide='point.showDistance()'>{{point.distance}} km</h4>
       </ion-item>
     </ion-list>
   </ion-content>
