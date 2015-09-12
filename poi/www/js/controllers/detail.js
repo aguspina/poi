@@ -11,7 +11,7 @@ angular.module('poiApp')
       var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
               Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1Rad) * Math.cos(lat2Rad);
       var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-      var d = 100 * c;
+      var d = 10000 * c;
       $scope.$apply(function () {
         point.distance = d;
       });
