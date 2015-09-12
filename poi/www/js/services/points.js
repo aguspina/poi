@@ -39,6 +39,18 @@ angular.module('poiApp')
           distance: 0,
           showDistance: function() {return this.distance === 0;}
         },
+        {
+          id: 4,
+          title: 'Smurfit Kappa',
+          shortDescription: 'Tienda de embalajes',
+          longDescription: 'Somos una empresa de embalajes reconocida en toda la region!',
+          imageUrl: '',
+          isStarred: false,
+          lat: -34.706508,
+          lon: -58.2782888,
+          distance: 0,
+          showDistance: function() {return this.distance === 0;}
+        },
       ];
     };
 
